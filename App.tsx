@@ -1,16 +1,20 @@
 import React, { Component, useState } from 'react';
+import { ApolloProvider } from '@apollo/client';
+import client from './graphql/client';
 
 const App = () => {
-  const [name] = useState('React');
+  const headerStyle = {
+    textAlign: 'center'
+  }
+
   return (
-    <div>
-      <p>
-        Start editing to see some magic happen :)
-      </p>
-      <p>
-        Name: { name }
-      </p>
-    </div>
+    <ApolloProvider client={client}>
+      <div className="container">
+        <h2 style={headerStyle}>
+          Search Star War Characters
+        </h2>
+      </div>
+    </ApolloProvider>
   )
 }
 
