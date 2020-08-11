@@ -1,25 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 
-interface AppProps { }
-interface AppState {
-  name: string;
+const App = () => {
+  const [name] = useState('React');
+  return (
+    <div>
+      <p>
+        Start editing to see some magic happen :)
+      </p>
+      <p>
+        Name: { name }
+      </p>
+    </div>
+  )
 }
 
-export class App extends Component<AppProps, AppState> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: 'React'
-    };
-  }
-
-  render() {
-    return (
-      <div>
-        <p>
-          Start editing to see some magic happen :)
-        </p>
-      </div>
-    );
-  }
-}
+export default App;
