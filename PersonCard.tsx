@@ -61,14 +61,15 @@ const PersonCard: FunctionComponent<{ person: Person }> = (prop) => {
         <div>
           <span>Birth year: { person.birthYear }</span>
         </div>
-        // <Measurements key={`${id}-mass`} mass={person.mass} height={person.height} />
-        // <FacialFeatures key={`${id}-facial`} eyeColor={eyeColor} skinColor={skinColor} hairColor={hairColor} />
-        // { name && <Homeworld key={`${id}-home`} name={name} /> }
-        // { (!!speciesName || !!language) && <Species key={id} speciesName={speciesName} language={language} /> }
-        // <FilmCard key={`${id}-films`} films={films} />
       </div>
     </div>
   )
 }
+
+  // <Measurements key={`${id}-mass`} mass={person.mass} height={person.height} />
+  // <FacialFeatures key={`${id}-facial`} eyeColor={eyeColor} skinColor={skinColor} hairColor={hairColor} />
+  // { name && <Homeworld key={`${id}-home`} name={name} /> }
+  // { (!!speciesName || !!language) && <Species key={id} speciesName={speciesName} language={language} /> }
+  // <FilmCard key={`${id}-films`} films={films} />
 
 export default PersonCard;
