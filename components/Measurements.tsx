@@ -10,7 +10,7 @@ const Measurements: FunctionComponent<Props> = (prop) => {
   return (
     <div className="physical-measurement">
       <p className="title">Measurements</p>
-      <div>
+      <div style={{ marginLeft: '0.25rem', marginRight: '0.25rem' }}>
         <span style={{ marginRight: '0.5rem'}}>Mass: { mass }</span>
         <span>Height: { height }</span>
       </div>

@@ -15,15 +15,15 @@ const FacialFeatures: FunctionComponent<Props> = (prop) => {
       <p className="title">Facial features</p>
       <div className="colors">
         { eyeColor && <div className="color">
-          <span>Eye color: </span>
+          <span>Eye: </span>
           <span className="eye-color" key={eyeColor}>{eyeColor}</span>
         </div> }
         { skinColor && <div className="color">
-          <span>Skin color: </span>
+          <span>Skin: </span>
           <span className="skin-color" key={skinColor}>{skinColor}</span>
         </div> }
         { hairColor && <div className="color">
-          <span>Hair color: </span>
+          <span>Hair: </span>
           <span className="hair-color" key={hairColor}>{hairColor}</span>
         </div>}
       </div>
