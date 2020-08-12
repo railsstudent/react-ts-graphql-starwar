@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
-// import FacialFeatures from './components/FacialFeatures';
-// import Measurements from './components/Measurements';
+import FacialFeatures from './components/FacialFeatures';
+import Measurements from './components/Measurements';
 // import Species from './components/Species';
 // import Homeworld from './components/Homeworld';
 // import FilmCard from './components/FilmCard';
@@ -34,6 +34,8 @@ const PersonCard: FunctionComponent<{ person: Person }> = (prop) => {
           <span>Birth year: { person.birthYear || 'UNKNOWN' }</span>
         </div>
       </div>
+      <Measurements key={`${id}-mass`} mass={person.mass} height={person.height} />
+      <FacialFeatures key={`${id}-facial`} eyeColor={eyeColor} skinColor={skinColor} hairColor={hairColor} />
     </div>
   )
 }
