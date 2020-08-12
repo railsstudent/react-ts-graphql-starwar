@@ -19,16 +19,73 @@ interface Film {
   title: string; 
 }
 
+enum Gender {
+  UNKNOWN = 'UNKNOWN',
+  MALE = 'MALE',
+  FEMALE = 'FEMALE',
+  HERMAPHRODITE = 'HERMAPHRODITE',
+}
+
+enum HairColor {
+  UNKNOWN = 'UNKNOWN',
+  BLONDE = 'BLONDE',
+  BROWN = 'BROWN',
+  BLACK = 'BLACK',
+  AUBURN = 'AUBURN',
+  WHITE = 'WHITE',
+  GREY = 'GREY',
+}
+
+enum EyeColor {
+  UNKNOWN = 'UNKNOWN',
+  BLUE = 'BLUE',
+  YELLOW = 'YELLOW',
+  RED = 'RED',
+  BROWN = 'BROWN',
+  BLUEGREY = 'BLUEGREY',
+  BLACK = 'BLACK',
+  ORANGE = 'ORANGE',
+  HAZEL = 'HAZEL',
+  PINK = 'PINK',
+  GOLD = 'GOLD',
+  GREEN = 'GREEN',
+  WHITE = 'WHITE',
+  DARK = 'DARK'
+}
+
+enum SkinColor {
+  UNKNOWN = 'UNKNOWN',
+  FAIR = 'FAIR',
+  GOLD = 'GOLD',
+  WHITE = 'WHITE',
+  LIGHT = 'LIGHT',
+  GREEN = 'GREEN',
+  GREENTAN = 'GREENTAN',
+  PALE = 'PALE',
+  METAL = 'METAL',
+  DARK = 'DARK',
+  BROWNMOTTLE = 'BROWNMOTTLE',
+  BROWN = 'BROWN',
+  GREY = 'GREY',
+  MOTTLEDGREEN = 'MOTTLEDGREEN',
+  ORANGE = 'ORANGE',
+  BLUE = 'BLUE',
+  RED = 'RED',
+  YELLOW = 'YELLOW',
+  TAN = 'TAN',
+  SILVER = 'SILVER'
+}
+
 interface Person {
   id: string;
   name: string;
   height: number;
   mass: number;
   birthYear: string;
-  gender: string;
-  eyeColor: string[];
-  hairColor: string[];
-  skinColor: string[];
+  gender: Gender;
+  eyeColor: EyeColor[];
+  hairColor: HairColor[];
+  skinColor: SkinColor[];
   homeworld?: Planet;
   species?: Species[];
   films: Film[]
@@ -59,7 +116,7 @@ const PersonCard: FunctionComponent<{ person: Person }> = (prop) => {
       </div>
       <div className="details">
         <div>
-          <span>Birth year: { person.birthYear }</span>
+          <span>Birth year: { person.birthYear || 'UNKNOWN' }</span>
         </div>
       </div>
     </div>
