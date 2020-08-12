@@ -2,6 +2,7 @@ import React, { Component, useState } from 'react';
 import { ApolloProvider } from '@apollo/client';
 import { client } from './graphql/client';
 import X from './components/x'
+import SearchForm from './SearchForm';
 
 const App = () => {
   const headerStyle = {
@@ -15,6 +16,7 @@ const App = () => {
           Search Star War Characters
         </h2>
         <X name={'Peter'} />
+        <SearchForm />
       </div>
     </ApolloProvider>
   )
