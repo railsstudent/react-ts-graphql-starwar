@@ -3,7 +3,7 @@ import FacialFeatures from './components/FacialFeatures';
 import Measurements from './components/Measurements';
 import Species from './components/Species';
 import Homeworld from './components/Homeworld';
-// import FilmCard from './components/FilmCard';
+import FilmCard from './components/FilmCard';
 import { Person } from './types';
 
 const PersonCard: FunctionComponent<{ person: Person }> = (prop) => {
@@ -38,14 +38,9 @@ const PersonCard: FunctionComponent<{ person: Person }> = (prop) => {
       <FacialFeatures key={`${id}-facial`} eyeColor={eyeColor} skinColor={skinColor} hairColor={hairColor} />
       { name && <Homeworld key={`${id}-home`} name={name} /> }
       { (!!speciesName || !!language) && <Species key={id} speciesName={speciesName} language={language} /> }
+      <FilmCard key={`${id}-films`} films={films} />
     </div>
   )
 }
-
-  // <Measurements key={`${id}-mass`} mass={person.mass} height={person.height} />
-  // <FacialFeatures key={`${id}-facial`} eyeColor={eyeColor} skinColor={skinColor} hairColor={hairColor} />
-  // { name && <Homeworld key={`${id}-home`} name={name} /> }
-  // { (!!speciesName || !!language) && <Species key={id} speciesName={speciesName} language={language} /> }
-  // <FilmCard key={`${id}-films`} films={films} />
 
 export default PersonCard;
