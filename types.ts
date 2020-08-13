@@ -9,7 +9,8 @@ export interface Species {
 
 export interface Film {
   episodeId: number;
-  title: string; 
+  title: string;
+  director: string;
 }
 
 export enum Gender {
