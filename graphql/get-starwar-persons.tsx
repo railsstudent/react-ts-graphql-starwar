@@ -26,7 +26,8 @@
 //     },
 //     films(orderBy: episodeId_ASC) {
 //        episodeId,
-//        title
+//        title,
+//        director
 //     }
 // 	}
 // }
