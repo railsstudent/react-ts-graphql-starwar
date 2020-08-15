@@ -1,11 +1,9 @@
 import React, { FunctionComponent } from 'react';
 import { Film } from '../types';
 
-const ListItem: FunctionComponent<{ film: Film }> = ({ film }) => {
-  const { episodeId, title, director } = film;
-
+const ListItem: FunctionComponent<{ film: Film }> = ({ film: { title, director } }) => {
   return (
-    <li className='file-item' style={{listStyleType: 'none'}}>
+    <li className='film-item' style={{listStyleType: 'none'}}>
       <span style={{display: 'block'}}>{title}</span>
       <span style={{display: 'block'}}>{director}</span>
     </li>
